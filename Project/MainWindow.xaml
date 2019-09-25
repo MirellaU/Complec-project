@@ -1,0 +1,25 @@
+﻿<Window x:Class="Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <Label Content="Podaj wartość R1" Margin="6,17,0,276" HorizontalAlignment="Left" Width="100"/>
+        <Label Content="Podaj wartość R2" Margin="124,17,0,0" HorizontalAlignment="Left" Width="100" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Podaj wartość C" Margin="242,17,0,0" HorizontalAlignment="Left" Width="94" Height="26" VerticalAlignment="Top"/>
+        <TextBox x:Name="R1_textbox" Margin="13,48,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="80" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="R2_textbox" Margin="136,48,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="80" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="C_textbox" Margin="250,48,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="80" Height="23" VerticalAlignment="Top"/>
+        <Button x:Name="draw_btn" Content="Rysuj wykresy" Margin="208,99,227,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Podaj przedział częstotliwości" HorizontalAlignment="Left" Margin="346,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.409,-0.05"/>
+        <TextBox x:Name="from_freq_textbox" HorizontalAlignment="Left" Height="23" Margin="369,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <TextBox x:Name="to_freq_textbox" HorizontalAlignment="Left" Height="23" Margin="446,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="418,48,0,0" VerticalAlignment="Top"/>
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" Margin="6,136,7,0" />
+    </Grid>
+</Window>
